@@ -2,7 +2,7 @@ body {
 	font-family: Calibri, Helvetica, Arial, sans-serif;
 	text-shadow: 0 2px 1px #000;
 	font-size: 18px;
-	color: rgba(211, 188, 69, .9);
+	color: #eee;
 	background: url("../images/background2.png"), url("../images/background1.jpg");
 	-webkit-background-size: contain, auto;
 	-moz-background-size: contain, auto;
@@ -11,21 +11,38 @@ body {
 	background-position-x: center, center;
 }
 h1, h2, h3, h4, h5, h6, .position {
-	text-transform: uppercase;
 	font-size: 24px;
 	font-family: Calibri,Helvetica,Arial,sans-serif;
 	font-weight: 700;
+	color: #FFF;
 }
 p {
 	margin: 0 0 15px;
-	color: #eee;
 }
 a {
 	color: #777;
 	transition: color .6s;
+	text-decoration: underline;
 }
 a:hover, a:focus {
 	color: #eee;
+}
+*:focus {
+	outline: 0 !important;
+}
+.alert, .panel {
+	text-shadow: none;
+}
+img.alignleft {
+	text-align: left;
+	float: left;
+	margin: 6px 12px 5px 0;
+	border: 3px solid #eee;
+	border-radius: 2px;
+	box-shadow: 0 8px 15px -2px #000;
+}
+.spider_popup_close_fullscreen {
+	font-size: 21px !important;
 }
 @media (min-width: 1200px) {
 	.container {
@@ -45,7 +62,7 @@ header nav.navbar {
 	margin-bottom: 0px;
 	border: none;
 	border-radius: 0;
-	background-color: rgba(20,20,20,.8);
+	background-color: rgb(20,20,20);
 }
 header nav.navbar .navbar-nav {
 	float: right;
@@ -54,19 +71,66 @@ header nav.navbar .navbar-nav>li>a {
 	line-height: 60px;
 	height: 60px;
 	padding: 0 15px;
+	text-decoration: none;
 }
 header nav.navbar .navbar-nav>li.current_page_item {
 	border-bottom: 2px solid rgb(219, 166, 33);
 }
 header nav.navbar .navbar-nav>li.current_page_item>a {
-	color: rgba(211, 188, 69, 0.89);
+	color: #FFF;
+}
+
+/*********** content ***********/
+
+article {
+min-height: 800px;
+}
+
+article h1.title {
+	text-align: center;
+	font-size: 38px;
+	line-height: 60px;
+	clear: both;
+}
+.portfolio.btn-social {
+	margin-top: 30px;
+}
+.panel {
+	margin: 20px 0 50px;
+	color: #888;
+}
+.panel-body {
+	padding: 35px 15px;
+}
+blockquote {
+	border: none;
+	padding: 10px 0;
+	margin: 0;
+	position: relative;
+}
+blockquote:before, blockquote:after {
+	font-size: 120px;
+	line-height: 21px;
+	font-family: serif;
+	position: absolute;
+	text-shadow: 0 2px 4px #B2B2B2;
+}
+blockquote:before {
+	content: "\201C";
+	top: -5px;
+	left: 0;
+}
+blockquote:after {
+	content: "\201D";
+	bottom: -60px;
+	right: 0;
 }
 
 /*********** footer ***********/
 
 footer {
 	text-align: center;
-	background-color: rgba(21, 21, 21, 0.6);
+	background-color: rgb(21, 21, 21);
 	margin-top: 50px;
 	padding-top: 20px;
 	border-top: 3px solid #2F2F2F;
@@ -81,17 +145,20 @@ footer h3 {
 	line-height: 50px;
 }
 footer .title {
-	color: rgba(211, 188, 69, .9);
+	color: #FFF;
 }
 footer .footer-below {
 	text-align: center;
 	background-color: #111;
-	line-height: 30px;
 	margin-top: 10px;
 	font-size: 15px;
-	color: #796C24;
+	color: #666;
 }
-footer .btn-social {
+footer .footer-below .row {
+	padding-bottom: 0;
+	line-height: 30px;
+}
+footer .btn-social, .portfolio.btn-social {
 	border: 2px solid #777;
 	display: inline-block;
 	border-radius: 30px;
@@ -99,13 +166,13 @@ footer .btn-social {
 	height: 60px;
 	transition: all .6s;
 }
-footer .btn-social:hover {
+footer .btn-social:hover, .portfolio.btn-social:hover {
 	background-color: #777;
 }
-footer .fa {
+footer .fa, .portfolio i.fa.fa-fw {
 	font-size: 36px;
 	width: 56px;
-	line-height: 56px;
+	line-height: 56px !important;
 }
 footer a.btn-social + .btn-social {
 	margin-left: 10px;
