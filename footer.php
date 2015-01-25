@@ -17,7 +17,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						Copyright &copy; 2014 - Sunny K Makeup Artist and Creative Hair Stylist developed by <a href="http://sonnywebdesign.net/">SonnY</a> - All right reserved.
+						Copyright &copy; <?php echo date("Y") ?> - Sunny K Makeup Artist and Creative Hair Stylist developed by <a href="http://sonnywebdesign.net/">SonnY</a> - All right reserved.
 					</div>
 				</div>
 			</div>

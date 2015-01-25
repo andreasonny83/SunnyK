@@ -50,20 +50,24 @@ function draw_table() {
 
 function contact_form( $atts, $content = null ) {
 	$output = '
-	<form method="post" action="' . $_SERVER['REQUEST_URI'] . '" id="contact_form">
+	<form method="post" action="' . $_SERVER['REQUEST_URI'] . '" id="contact_form" name="contact_form">
 		<div class="form-group">
 		<label for="userName">Enter your name</label>
-		<input type="text" class="form-control" id="userName" placeholder="Your name" required>
+		<input type="text" class="form-control" id="userName" name="userName" placeholder="Your name" required>
 		</div>
 		<div class="form-group">
 		<label for="userEmail">Email address</label>
-		<input type="email" class="form-control" id="userEmail" placeholder="Enter email" required>
+		<input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="Enter email" required>
+		</div>
+		<div class="form-group">
+		<label for="userPhone">Telephone</label>
+		<input type="number" class="form-control" id="userPhone" name="userPhone" placeholder="Enter phone number" required>
 		</div>
 		<div class="form-group">
 		<label for="userComment">Nature of Enquiry</label>
-		<textarea class="form-control" placeholder="Leave your message here" rows="5" id="userComment" required></textarea>
+		<textarea class="form-control" placeholder="Leave your message here" rows="5" id="userComment" name="userMessage" required></textarea>
 		</div>
-		<button type="submit" class="btn btn-default">Submit</button>
+		<button type="submit" name="Submit" class="btn btn-default">Submit</button>
 	</form>';
 
 	return $output;
