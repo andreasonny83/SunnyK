@@ -25,8 +25,6 @@
 					</footer>
 
 				</article>
-			<?php endwhile; ?>
-		<?php endif; ?>
 
 	</section>
 
