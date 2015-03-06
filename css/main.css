@@ -1,23 +1,25 @@
 body {
-	font-family: Calibri, Helvetica, Arial, sans-serif;
-	text-shadow: 0 2px 1px #000;
+	margin-top: 76px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
 	font-size: 18px;
-	color: #eee;
-	background: url("../images/background2.png"), url("../images/background1.jpg");
-	-webkit-background-size: contain, auto;
-	-moz-background-size: contain, auto;
-	-o-background-size: contain, auto;
-	background-size: contain, auto;
-	background-position-x: center, center;
+	color: #222;
+	background-color: #fff;
 }
 h1, h2, h3, h4, h5, h6, .position {
 	font-size: 24px;
-	font-family: Calibri,Helvetica,Arial,sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-weight: 700;
-	color: #FFF;
+	color: #000;
 }
 p {
 	margin: 0 0 15px;
+}
+p > a {
+	font-weight: 400;
+}
+p span.tel {
+	letter-spacing: 1px;
 }
 a {
 	color: #777;
@@ -30,9 +32,6 @@ a:hover, a:focus {
 *:focus {
 	outline: 0 !important;
 }
-.alert, .panel {
-	text-shadow: none;
-}
 img.alignleft {
 	text-align: left;
 	float: left;
@@ -41,9 +40,6 @@ img.alignleft {
 	border-radius: 2px;
 	box-shadow: 0 8px 15px -2px #000;
 }
-.spider_popup_close_fullscreen {
-	font-size: 21px !important;
-}
 @media (min-width: 1200px) {
 	.container {
 		width: 1024px;
@@ -51,51 +47,76 @@ img.alignleft {
 }
 header {
 	box-shadow: 0 1px 50px rgba(227, 83, 237, .5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+header .navbar {
+	height: 65px;
 }
 header .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-	color: #eee;
+	color: #bbb;
 }
 header .navbar-header span {
 	display: block;
 }
 header a.navbar-brand {
 	text-decoration: none;
+	padding: 8px 15px;
 }
 header a.navbar-brand span {
-	color: #fff;
-}
-header a.navbar-brand span.desc {
-	font-size: 12px;
+	color: #000;
 }
 header a.navbar-brand span.title {
-	font-size: 21px;
+	font-size: 24px;
+	line-height: 28px;
+}
+header a.navbar-brand span.desc {
+	font-size: 13px;
+	line-height: 20px;
 }
 header nav.navbar {
 	margin-bottom: 0px;
 	border: none;
 	border-radius: 0;
-	background-color: rgb(20,20,20);
+	background-color: #FFF;
 }
 header nav.navbar .navbar-nav {
 	float: right;
 }
 header nav.navbar .navbar-nav>li>a {
-	line-height: 60px;
-	height: 60px;
+	line-height: 63px;
+	height: 63px;
 	padding: 0 15px;
 	text-decoration: none;
 }
 header nav.navbar .navbar-nav>li.current_page_item {
-	border-bottom: 2px solid #FFF;
+	border-bottom: 2px solid #000;
 }
 header nav.navbar .navbar-nav>li.current_page_item > a {
-	color: #FFF;
+	color: #000;
 }
 
 /*********** content ***********/
 
+#wds_container1_0 {
+	margin-top: 60px;
+}
+
 article {
-min-height: 800px;
+	min-height: 600px;
+	background-color: #fff;
+	margin-bottom: 20px;
+	border-radius: 2px;
+	box-shadow: 0px 2px 30px -2px #aaa;
+
+}
+.row {
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 article h1.title {
@@ -125,7 +146,6 @@ blockquote:before, blockquote:after {
 	line-height: 21px;
 	font-family: serif;
 	position: absolute;
-	text-shadow: 0 2px 4px #B2B2B2;
 }
 blockquote:before {
 	content: "\201C";
@@ -138,44 +158,58 @@ blockquote:after {
 	right: 0;
 }
 
+/*********** slider ***********/
+
+.spider_popup_wrap {
+	background: #fff !important;
+}
+
+.spider_popup_close_fullscreen {
+	font-size: 21px !important;
+	color: #000 !important;
+}
+
 /*********** footer ***********/
 
 footer {
 	text-align: center;
-	background-color: rgb(21, 21, 21);
+	background-color: #aaa;
 	margin-top: 50px;
-	padding-top: 20px;
-	border-top: 3px solid #2F2F2F;
-}
-footer .row {
-	padding-bottom: 20px;
+	margin-left: -15px;
+	margin-right: -15px;
+	border-top: 3px solid #666;
 }
 footer p {
-	color: #ddd;
+	color: #333;
 }
 footer h3 {
 	line-height: 50px;
 }
+footer a:hover {
+	color: #000;
+}
 footer .title {
-	color: #FFF;
+	color: #111;
 }
 footer .footer-below {
 	text-align: center;
-	background-color: #111;
+	background-color: #eee;
 	margin-top: 10px;
-	font-size: 15px;
-	color: #666;
+	font-size: 13px;
+	font-weight: 300;
+	color: #aaa;
 }
 footer .footer-below .row {
 	padding-bottom: 0;
 	line-height: 30px;
 }
 footer .btn-social, .portfolio.btn-social {
-	border: 2px solid #777;
+	border: 2px solid #333;
 	display: inline-block;
 	border-radius: 30px;
 	width: 60px;
 	height: 60px;
+	color: #333;
 	transition: all .6s;
 }
 footer .btn-social:hover, .portfolio.btn-social:hover {
