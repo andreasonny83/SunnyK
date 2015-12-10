@@ -1,7 +1,7 @@
 					<footer>
 						<div class="container">
 							<div class="row">
-								<div class="footer-col col-md-6">
+								<div class="footer-col social col-md-6">
 									<h3  class="title">Social Links</h3>
 									<a href="https://www.facebook.com/groups/165288720181270/" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
 									<a href="http://instagram.com/sunny_k_makeupartist/" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
@@ -16,10 +16,12 @@
 						<div class="footer-below">
 							<div class="container">
 								<div class="row">
-									<div class="col-lg-12">
-										Copyright &copy; <?php echo date("Y") ?> - Sunny K Makeup Artist and Creative Hair Stylist developed by <a href="http://sonnywebdesign.net/">SonnY</a> - All rights reserved.
-									</div>
-								</div>
+									<?php
+									$footer = get_page_by_path( 'footer' );
+									setup_postdata( $footer );
+									the_content();
+									?>
+								<p class="copy">Developed with <i class="fa fa-heart"></i> by <a href="https://github.com/andreasonny83" alt="andreasonny83 on GitHub">&lt;SonnY&gt;</a></p>
 							</div>
 						</div>
 					</footer>
