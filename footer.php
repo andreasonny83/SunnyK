@@ -21,7 +21,7 @@
 									setup_postdata( $footer );
 									the_content();
 									?>
-								<p class="copy">Developed with <i class="fa fa-heart"></i> by <a href="https://github.com/andreasonny83" alt="andreasonny83 on GitHub">&lt;SonnY&gt;</a></p>
+								<p class="copy">Developed by <a href="https://github.com/andreasonny83" alt="andreasonny83 on GitHub">&lt;SonnY&gt;</a></p>
 							</div>
 						</div>
 					</footer>
