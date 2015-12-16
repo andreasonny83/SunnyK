@@ -45,3 +45,4 @@
 			</div>
 		</nav>
 	</header>
+	<section <?php post_class('container');?>>
